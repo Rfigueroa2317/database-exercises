@@ -19,4 +19,5 @@ VALUES ('Meat Loaf','Bat Out of Hell',21.7,'Hard rock, glam rock, progressive ro
 
 DESCRIBE albums;
 
+
 SELECT * FROM albums;
