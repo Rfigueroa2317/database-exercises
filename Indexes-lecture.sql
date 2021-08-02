@@ -15,3 +15,9 @@ Unique;
     . Can be any column
     . Completely index of other tables
     . Gives perform boost
+
+Clustered index;
+    . More than 1 column
+    . Can be a primariy key
+    . Must be unique
+    . Can be referenced as an Fk
