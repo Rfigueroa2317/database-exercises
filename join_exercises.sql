@@ -40,7 +40,6 @@ SELECT * FROM users;
 SELECT users.name as user_name, roles.name as role_name
 FROM users u
          JOIN roles r on u.role_id = r.id;
-
 INSERT INTO users (name, email, role_id)
 VALUES ('jim bob','jimbob@example.com',4);
 
@@ -49,3 +48,31 @@ SELECT r.name, COUNT(r.name) as 'Role Count'
 FROM users u
          JOIN roles r on u.role_id = r.id
 GROUP BY r.name;
+
+
+SELECT *
+FROM employees e
+JOIN dept_manager dm on e. emp_no = dm.em_no
+JOIN departments d on dm.dept_no = d.dept_no
+WHERE dm.to_date = '9999-01-01'
+ORDER BY d.dept_name;
+
+
+SELECT title
+FROM titles t
+JOIN dept_emp de on t.emp_no = de.emp_no
+WHERE t.to_date = '9999-01-01'
+AND de.dept_no = (SELECT dept_no FROM departments WHERE dept_name = 'Customer Service')
+GROUP BY t.title;
+
+
+SELECT d.dept_name as 'Department Name',
+    CONCAT(e.first_name, ' ', e.last_name) 'Department Manager',
+       s.salary as Salary
+FROM departments d
+JOIN dept_manager dm on d.dept_no = dm.dept_no
+JOIN empoyees e on dm.emp_no = e.emp_no
+JOIN salaries s on e.emp_no = s.emp_no
+WHERE dm.to_date = '9999-01-01'
+AND s.to_date = '9999-01-01'
+ORDER BY d.dept_name;
