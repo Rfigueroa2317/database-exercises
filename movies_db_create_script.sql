@@ -16,3 +16,5 @@ CREATE TABLE movies(
     poster TEXT NOT NULL,
     primary key (id)
 );
+
+
