@@ -50,4 +50,5 @@ VALUES ((select id from authors where first_name = 'Douglas' and last_name = 'Ad
 SELECT * FROM quotes;
 
 
+# today's push
 
