@@ -7,7 +7,9 @@ SELECT DISTINCT last_name FROM employees ORDER BY last_name DESC, last_name LIKE
 
 
 # 3
-SELECT salary FROM salaries WHERE emp_no LIMIT 5 OFFSET 3;
 
-SELECT * FROM employees WHERE employees IN
+SELECT emp_no FROM salaries ORDER BY salary DESC LIMIT 5;
+
+# 4
+SELECT emp_no FROM salaries ORDER BY salary DESC LIMIT 5 OFFSET 45;
 
